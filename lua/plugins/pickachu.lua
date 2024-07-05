@@ -1,10 +1,10 @@
 return {
-  {
-    "mattn/calendar-vim",
-  },
-  {
-    "DougBeney/pickachu",
-  },
+  -- {
+  --   "mattn/calendar-vim",
+  -- },
+  -- {
+  --   "DougBeney/pickachu",
+  -- },
   {
     "nvim-orgmode/orgmode",
     event = "VeryLazy",
