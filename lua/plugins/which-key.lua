@@ -5,7 +5,7 @@ return {
       ["<leader>o"] = { name = "+obsidian" },
       ["<leader>ot"] = { name = "+task" },
       ["<leader>on"] = { name = "+note" },
-      ["<leader>on"] = { name = "+search" },
+      ["<leader>os"] = { name = "+search" },
     },
   },
 }
