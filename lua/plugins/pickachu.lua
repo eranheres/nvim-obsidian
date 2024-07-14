@@ -14,6 +14,7 @@ return {
       require("orgmode").setup({
         org_agenda_files = "~/projects/orgfiles/**/*",
         org_default_notes_file = "~/projects/orgfiles/refile.org",
+        calendar_week_start_day = 0
       })
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option

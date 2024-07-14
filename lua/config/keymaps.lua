@@ -21,13 +21,16 @@ map({ "n", "v" }, "<leader>ont", function () require("gtd.notes").fly_task() end
 map({ "n", "v" }, "<leader>onm", function () require("gtd.notes").meeting_note() end , { desc = "New meeting note" })
 map({ "n", "v" }, "<leader>onp", function () require("gtd.notes").project_note() end , { desc = "New project note" })
 
-map({ "n", "v" }, "<leader>osoa", function () require("gtd.search").search_open_all() end , { desc = "Open all" })
-map({ "n", "v" }, "<leader>oson", function () require("gtd.search").search_open_assignee() end , { desc = "Open assignee" })
-map({ "n", "v" }, "<leader>osda", function () require("gtd.search").search_due_all() end , { desc = "Dua all" })
-map({ "n", "v" }, "<leader>osdn", function () require("gtd.search").search_due_assignee() end , { desc = "Due assignee" })
+map({ "n", "v" }, "<leader>osoa", function () require("gtd.telescope").search_open_all() end , { desc = "Open all" })
+map({ "n", "v" }, "<leader>oson", function () require("gtd.telescope").search_open_assignee() end , { desc = "Open assignee" })
+map({ "n", "v" }, "<leader>osda", function () require("gtd.telescope").search_due_all() end , { desc = "Dua all" })
+map({ "n", "v" }, "<leader>osdn", function () require("gtd.telescope").search_due_assignee() end , { desc = "Due assignee" })
 map({ "n", "v" }, "<leader>osc",  function () require("gtd.tasks").color_due() end , { desc = "Color due" })
 
+map({ "n", "v" }, "<leader>oe",  "<cmd>Neotree source=basic<cr>", { desc = "Color due" })
+
 map({ "n", "v" }, "<leader>otc", function () require("gtd.tasks").complete_task() end , { desc = "Complete task" })
+map({ "n"      }, "<cr>", function () require("gtd.tasks").complete_task() end , { desc = "Complete task" })
 map({ "n", "v" }, "<leader>otn", function () require("gtd.tasks").new_task() end , { desc = "New task" })
 map({ "n", "v" }, "<leader>otq", function () require("gtd.tasks").new_quick_task() end , { desc = "New quick task" })
 map({ "n", "v" }, "<leader>ota", function () require("gtd.tasks").assigne_task() end , { desc = "Assign task" })
