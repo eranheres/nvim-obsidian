@@ -1,1 +1,2 @@
-return require("common.plugins.all")
+return {} -- disable common
+-- return require("common.plugins.all")
