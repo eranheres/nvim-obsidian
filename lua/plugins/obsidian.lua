@@ -45,7 +45,8 @@ return {
       workspaces = {
         {
           name = "personal",
-          path = "/Users/eranheres/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain",
+          -- path = "/Users/eranheres/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain",
+          path = os.getenv("SECOND_BRAIN_DIR")
         },
       },
       completion = {
