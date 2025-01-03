@@ -4,7 +4,6 @@ local conf = {
     "nvim-lua/plenary.nvim",
     "kyazdani42/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
-    "example",
     "gtd/basic",
   },
   -- Check what happens if all other sources are removed
@@ -15,16 +14,15 @@ local conf = {
         "filesystem",
         "buffers",
         "git_status",
-        "example",
         "basic",
       },
-      example = {
-        -- The config for your source goes here. This is the same as any other source, plus whatever
-        -- special config options you add.
-        --window = {...}
-        --renderers = { ..}
-        --etc
-      },
+      -- example = {
+      --   -- The config for your source goes here. This is the same as any other source, plus whatever
+      --   -- special config options you add.
+      --   --window = {...}
+      --   --renderers = { ..}
+      --   --etc
+      -- },
       basic = {
       },
     })

@@ -133,8 +133,8 @@ return {
     },
   },
   {
-    "gtd",
-    dir = gtd_folder(),
+    "eranheres/gtd",
+    -- dir = gtd_folder(),
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",

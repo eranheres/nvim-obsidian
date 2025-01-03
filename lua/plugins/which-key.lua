@@ -1,7 +1,7 @@
 return {
   "folke/which-key.nvim",
   opts = {
-    defaults = {
+    spec = {
       ["<leader>o"] = { name = "+obsidian" },
       ["<leader>ot"] = { name = "+task" },
       ["<leader>on"] = { name = "+note" },
