@@ -1,14 +1,3 @@
-local function gtd_folder()
-  local folder_path = "/Users/eranheres/projects/personal/nvim/plugins/gtd"
-  local ok, err, code = os.rename(folder_path, folder_path)
-
-  if ok or code == 13 then -- code 13 indicates permission denied, but the folder exists
-    return folder_path
-  else
-    return "eranheres/gtd.git"
-  end
-end
-
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -46,7 +35,7 @@ return {
         {
           name = "personal",
           -- path = "/Users/eranheres/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain",
-          path = os.getenv("SECOND_BRAIN_DIR")
+          path = os.getenv("SECOND_BRAIN_DIR"),
         },
       },
       completion = {
