@@ -1,3 +1,14 @@
+local function gtd_folder()
+  local folder_path = "/Users/eranheres/projects/personal/nvim/plugins/gtd"
+  local ok, err, code = os.rename(folder_path, folder_path)
+
+  if ok or code == 13 then -- code 13 indicates permission denied, but the folder exists
+    return folder_path
+  else
+    return "eranheres/gtd.git"
+  end
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -34,7 +45,7 @@ return {
       workspaces = {
         {
           name = "personal",
-          path = "~/projects/second-brain",
+          path = "/Users/eranheres/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain",
         },
       },
       completion = {
@@ -123,13 +134,13 @@ return {
   },
   {
     "gtd",
-    dir = "~/projects/personal/nvim/plugins/gtd",
+    dir = gtd_folder(),
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
       "epwalsh/obsidian.nvim",
-      "nvim-neo-tree/neo-tree.nvim"
+      "nvim-neo-tree/neo-tree.nvim",
     },
-    opts = {}
+    opts = {},
   },
 }

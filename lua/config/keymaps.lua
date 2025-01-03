@@ -39,5 +39,14 @@ map({ "n", "v" }, "<leader>otp", function () require("gtd.tasks").set_priority()
 map({ "n", "v" }, "<leader>ott", function () require("gtd.tasks").set_text() end , { desc = "Set task text" })
 map({ "n", "v" }, "<leader>otl", function () require("gtd.tasks").add_log() end , { desc = "Add task log" })
 
+map({ "n", "v" }, "<leader>ox",  function ()
+  -- local path = "/Users/eranheres/projects/tasks/"
+  local path = "/Users/eranheres/Library/CloudStorage/GoogleDrive-eran.heres@gmail.com/My Drive/_Tasks/"
+  local file = path.."Tasks-"..os.date("%Y-%m-%d")..".pdf"
+  require("gtd.export").to_pdf(file)
+end, { desc = "Color due" })
+
+map({ "n", "v" }, "<leader>og",  function () vim.g.goto_logs() end, { desc = "Goto logs" })
+
 map({ "n", "v" }, "<leader>cv", "<cmd>write<cr><cmd>source<cr>" , { desc = "Source file" })
 
